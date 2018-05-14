@@ -1,0 +1,43 @@
+package ar.edu.unlam.pb2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestDisco {
+
+	@Test
+	public void testQueCalculaPerimetroInterior() {
+		Disco miDisco=new Disco(4,5);
+		double valor_obtenido= miDisco.CalcularPerimetroInterior();
+		System.out.println("Perimetro interior= "+valor_obtenido);
+	}
+	@Test
+	public void testQueCalculaPerimetroExterior(){
+		Disco miDisco=new Disco(4,5);
+		double valor_obtenido= miDisco.CalcularPerimetroExterior();
+		System.out.println("Perimetro Exterior= "+valor_obtenido);
+	}
+	@Test
+	public void testQueCalculaSuperficie(){
+		Disco miDisco = new Disco(1,5);
+		double valor_obtenido= miDisco.CalcularSuperficie();
+		System.out.println("Superficie= "+ valor_obtenido);
+	}
+	
+	@Test
+	public void testQueModificaRadioInterior(){
+		Disco miDisco = new Disco(1,5);
+		miDisco.setRadio_interior(2);
+		System.out.println("Nuevo radio interior= "+miDisco.getRadio_interior());
+		
+	}
+	@Test
+	public void testQueModificaRadioExterior(){
+		Disco miDisco = new Disco(1,5);
+		miDisco.setRadio_exterior(7);
+		System.out.println("Nuevo radio exterior= "+miDisco.getRadio_exterior());
+		
+	}
+
+}
