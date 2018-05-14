@@ -1,0 +1,46 @@
+package ar.edu.unlam.pb2;
+
+public class Disco {
+	//atributos
+		private double radio_interior;
+		private double radio_exterior;
+		
+		//constructor
+		public Disco(double radio_interior, double radio_exterior){
+			this.radio_interior=radio_interior;
+			this.radio_exterior=radio_exterior;
+		}
+		//metodos
+		public double CalcularPerimetroInterior()
+		{
+			return (2* 3.1416)*(this.radio_interior);
+			
+		}
+		
+		public double CalcularPerimetroExterior(){
+			return (2* 3.1416)*(this.radio_exterior);
+			
+		}
+		
+		public double CalcularSuperficie(){
+			double area_exterior= (3.1416)*(this.radio_exterior*this.radio_exterior);
+			double area_interior= (3.1416)*(this.radio_interior*this.radio_interior);
+			return area_exterior - area_interior;
+		}
+		
+		//getters y setters
+		public double getRadio_interior() {
+			return radio_interior;
+		}
+		public void setRadio_interior(double radio_interior) {
+			this.radio_interior = radio_interior;
+		}
+		public double getRadio_exterior() {
+			return radio_exterior;
+		}
+		public void setRadio_exterior(double radio_exterior) {
+			this.radio_exterior = radio_exterior;
+		}
+		
+}
+
